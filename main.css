@@ -8,8 +8,16 @@ html{
     background-image: url(fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center top;
 }
+
+@media (max-width: 768px) {
+    html {
+        background-size: contain;
+        background-position: top center;
+    }
+}
+
 
 body{
     text-align: center;
@@ -17,7 +25,7 @@ body{
     font-size: 30px;
     color: white;
     background-color: rgba(0,0,0,0.5);
-    height: 100vh;
+    min-height: 100vh;
 
    
 
