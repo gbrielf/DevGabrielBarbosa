@@ -39,3 +39,38 @@ h1 {
     margin: 0;
     font-size: 50px;
 }
+
+h2 {
+    font-weight: 600;
+    color: #bdc3c7;
+    font-size: 22px;
+    margin: 0;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Centraliza os ícones */
+}
+
+ol li {
+    margin: 30px;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+}
+
+ol li a img {
+    width: 25px;
+    margin-top: 10px;
+    font-weight: 400;
+    filter: brightness(.8);
+    transition: all .3s ease;
+}
+
+ol li a img:hover {
+    transform: scale(1.15);
+    filter: brightness(1);
+}
