@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5); /* Mantendo o overlay escuro */
     background-image: url(fundo.jpg);
     background-position: center;
     background-size: cover;
@@ -32,6 +32,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.8); /* Restaurando a sombra escura */
 }
 
 h1 {
