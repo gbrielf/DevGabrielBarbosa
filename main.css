@@ -7,39 +7,47 @@ html{
     background-image: url(fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100dvh;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100dvh;
 }
 
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 30px;
+    font-size: clamp(16px, 4vw, 30px);
     color: white;
     background-color: rgba(0,0,0,0.5);  
-    height: 100vh;
+    min-height: 100dvh;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 h1{
-    padding-top: 4.75em;
-   margin: 0;
-   /* padding: 0; */
-   font-size: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(32px, 8vw, 60px);
+    line-height: 1.2;
 }
 
 h2{
-    font-weight: 600px;
-    margin-top: 0px;
+    font-weight: 600;
+    margin-top: 0.5rem;
     color: #bdc3c7;
-    font-size: 22px;
+    font-size: clamp(14px, 4vw, 24px);
     margin: 0;
+    margin-top: 0.5rem;
 }
 
 
 ol li a img{
-    width: 25px;
-    margin-top: 10px;
+    width: clamp(20px, 6vw, 32px);
+    margin-top: 1rem;
     font-weight: 400;
-
     filter: brightness(.8);
     transition: all .3s ease;
 }
@@ -53,10 +61,57 @@ ol{
     display: flex;
     list-style-type: none;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    gap: 1rem;
 }
 
 li{
-    margin: 30px;
+    margin: 0;
     font-style: normal;
     font-variant: normal;
+}
+
+/* Responsivo: Tablets e telas pequenas */
+@media (max-width: 768px) {
+    html {
+        background-attachment: scroll;
+    }
+    
+    body {
+        padding: 0.5rem;
+    }
+    
+    h1 {
+        padding: 1rem 0 0 0;
+    }
+    
+    ol {
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+}
+
+/* Responsivo: Celulares pequenos */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    h1 {
+        padding: 0.75rem 0 0 0;
+    }
+    
+    h2 {
+        margin-top: 0.25rem;
+    }
+    
+    ol {
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+    }
+    
+    ol li a img {
+        margin-top: 0.75rem;
+    }
 }
